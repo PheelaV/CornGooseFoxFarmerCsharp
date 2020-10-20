@@ -76,24 +76,18 @@ internal class Program
                     }
                 }
 
-                if(candidateSteps.Count != 0)
+                foreach(var candidateState in candidateSteps)
                 {
-                    foreach(var candidateState in candidateSteps)
+                    if(FinalState == candidateState)
                     {
-                        if(FinalState == candidateState)
-                        {
-                            validPaths.Add(new Path(candidateState, path));
-                        } 
-                        else 
-                        {
-                            pathsUnderConsideration.Add(new Path(candidateState, path));
-                        }
+                        validPaths.Add(new Path(candidateState, path));
+                    } 
+                    else 
+                    {
+                        pathsUnderConsideration.Add(new Path(candidateState, path));
                     }
-                    pathsUnderConsideration.Remove(path);
-
-                } else {
-                    pathsUnderConsideration.Remove(path);
                 }
+                pathsUnderConsideration.Remove(path);
             }
         }
 
