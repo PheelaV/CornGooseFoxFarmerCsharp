@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/CornGsFx.dll",
+            "program": "${workspaceFolder}/source/bin/Debug/netcoreapp3.1/CornGsFx.dll",
             "args": [],
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/source",
             "console": "internalConsole",
             "stopAtEntry": false
         },
